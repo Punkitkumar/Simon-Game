@@ -19,7 +19,8 @@ $(".btn").click(function (key) {
   handler(colorid);
   if (userClickedPattern[clicked] != gamePattern[clicked]) {
 
-
+    $("body").addClass("red");
+    playSound("wrong");
     $("h1").text("Game Over, Enter A Key to Start");
     clicked = 0 ;
     i = true ;
@@ -27,7 +28,6 @@ $(".btn").click(function (key) {
     gamePattern = [];
     userClickedPattern = [];    
     $(document).keypress(startGame);
-    $("body").addClass("red");
     setInterval(function(){
         $("body").removeClass("red");
     },1000);
