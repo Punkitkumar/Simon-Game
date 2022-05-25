@@ -21,7 +21,7 @@ $(".btn").click(function (key) {
 
     $("body").addClass("red");
     playSound("wrong");
-    $("h1").text("Game Over, Enter A Key to Start");
+    $("h1").text("Game Over, Enter A Key to Restart");
     clicked = 0 ;
     i = true ;
     level = 0 ;
